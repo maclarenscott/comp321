@@ -1,10 +1,24 @@
-Sample data will be taken from `./sample/'.  All pairs of matching
-(.in, .ans) files there will be used as sample data, in alphabetical
-order by file name.  This data will be displayed in the problem
-statement.
+Sample cases
+- sample1: Short numeric string; k=2 exercises a simple mid-rank pick.
+- sample2: Mixed lower/punctuation to highlight ASCII ordering.
+- sample3: Repeated highs/lows so duplicates matter for intermediate k.
 
-Secret test data will be taken from `./secret/'. All pairs of matching
-(.in, .ans) files there will be used to test each
-submission. Optionally a text file (with filename extension .txt)
-describing the purpose of an input file may be present. For each .txt
-file there must be a matching (.in,.ans) pair.
+Secret cases
+- secret01: Minimum size n=1, k=1 sanity.
+- secret02: Two characters with k=n to confirm trailing rank.
+- secret03: All identical characters; any k should return the same value.
+- secret04: k=1 with descending digits and punctuation to confirm max pick.
+- secret05: k=n with mixed upper/lower letters to cross ASCII classes.
+- secret06: Alternating extremes (~ vs ! and runs of *) to stress duplicate counting.
+- secret07: Mostly mid-ASCII 'M' with random spikes and k=50.
+- secret08–secret12: Random medium strings (length 20–80) with random k values.
+- secret13: Bursty runs of high '~' vs low 'A' to test handling of large duplicate blocks.
+- secret14: Strictly increasing ASCII sequence; k hits early in the order.
+- secret15: Strictly decreasing ASCII sequence; k near the tail.
+- secret16: Medium random string with k=1 to test maximum extraction.
+- secret17: Medium random string with k close to n (near-minimum character).
+- secret18: 2,000 mostly low '#' characters with 25 high '~' spikes; k targets the spikes.
+- secret19: Structured digits, uppercase, and lowercase runs; large k checks cross-category ordering.
+- secret20: Near-maximum length (200,000) fully random string; k=150,000 stresses time and memory.
+
+Total data size (inputs + answers) is under 500 KB.

@@ -1,0 +1,255 @@
+WE ARE TEAM 4 (P QUEUE II)
+Exercise - Activity
+COMP-321, Fall 2025, Section 001
+
+Original Draft: November 23th, 2025 (23:59)
+Presentation (in class time): November 26th, December 1st or December 3th
+Final Submission: December 10th, 2025 (23:59)
+
+Writing one Kattis problem
+
+Background:
+In the world of competitive programming, problem design is as intellectually
+demanding and creatively rewarding as problem solving itself. This assessment
+invites you to step into the role of a problem setter, a crucial figure in
+programming contests, by crafting your own original Kattis-style problem.
+Through this exercise, you will deepen your grasp of algorithmic thinking and
+computational constraints, while honing your ability to communicate complex
+technical ideas with clarity and precision.
+
+Important Preparation:
+Before proceeding with the development of your problem, it is essential that
+you carefully review the resources provided.
+
+• First, download and thoroughly examine the file named problemskeleton.zip
+  available on MyCourses. This archive contains a template that you are
+  expected to use as the foundation for your submission. Make sure to
+  understand its structure and fill in all relevant sections appropriately.
+
+• Second, you must read the official documentation on the Kattis problem
+  package format, which outlines the required components and conventions for
+  problem submissions: https://www.kattis.com/problem-package-format/
+
+• Third, read the following guidelines on writing programming contest problems
+  by Greg Hamerly: https://cs.baylor.edu/~hamerly/courses/4144_22s/writing_problems.txt
+
+Failure to consult these resources may result in incomplete or invalid
+submissions. Please review both the template and documentation carefully.
+
+Submission Requirements:
+You must submit the following materials to MyCourses by the deadline:
+
+Deliverable 1: A description of your original problem
+-----------------------------------------------------
+You must submit a LaTeX document presenting a clear and complete problem
+statement. The submission must include:
+
+• A detailed and precise problem statement
+• Clear input and output specifications
+• At least one sample input/output pair
+• At least one original visual element (illustration or figure)
+
+Important:
+The LaTeX file must be edited inside the problem statement folder in
+problemskeleton. Read the README.txt and template comments before beginning.
+
+Deliverable 2: One Correct and Efficient Solution
+-------------------------------------------------
+Implement one correct, efficient, well-structured, and well-documented
+solution in **each** of the following languages:
+
+• C++
+• Java
+• Python 3
+
+Each solution must be a single file inside: submissions/accepted/
+
+Deliverable 3: One Incorrect or Inefficient Solution
+----------------------------------------------------
+Implement at least one incorrect or inefficient solution demonstrating a
+typical Kattis failure mode:
+
+• Wrong Answer
+• Time Limit Exceeded
+• Memory Limit Exceeded
+
+Place it in the appropriate folder inside submissions/.
+
+Deliverable 4: Test-Case Generator
+----------------------------------
+Implement a test-case generator (C++/Java/Python) that produces valid inputs
+and outputs. Must include:
+
+• Hand-crafted edge cases
+• Randomly generated cases
+• Adequate coverage
+
+Place it inside: test_case_generator/
+
+Deliverable 5: Input Files
+--------------------------
+You must provide:
+
+• Sample Inputs: at least 3 files
+• Secret Inputs: at least 20 files
+
+All must end in `.in`.  
+Total combined size < 500 KB.
+
+Organize under:
+
+• data/sample/
+• data/secret/
+
+You must include **Description.txt** explaining what each input tests:
+• Edge cases
+• Large / TLE cases
+• Complicated random cases
+• Normal random cases
+
+Deliverable 6: Output Files
+---------------------------
+You must submit corresponding `.ans` files for each `.in` file.
+
+• Names must match exactly.
+• Total input file size < 500 KB.
+
+Deliverable 7: Input Validator
+------------------------------
+Create an input validator that:
+
+• Returns exit code **42** if input is valid  
+• Returns a different code if invalid  
+• Must match exactly the input format described in your statement  
+
+Place it inside: input_format_validators/
+
+Read the README in that folder before writing the validator.
+
+Deliverable 8: Presentation
+---------------------------
+Prepare a 20-minute slide deck. Requirements:
+
+• Clear, concise, visually engaging
+• Avoid text-heavy slides
+• Include at least one slide summarizing each deliverable
+• Include experiments and visualizations
+
+You may be asked questions such as:
+
+1. Deliverable 1: Problem Statement
+   • What inspired your design?
+   • Why illustration or figure?
+   • How was it created?
+   • Significance of the title?
+   • How were input constraints determined?
+   • Why choose the sample cases?
+   • Estimated difficulty?
+
+2. Deliverable 2: Correct Solution
+   • Time and space complexity?
+   • More efficient possible?
+   • Could a slower solution pass?
+   • Which language performed best?
+   • Best vs worst-case behavior?
+
+3. Deliverable 3: Incorrect Solution
+   • Complexity?
+   • Why incorrect?
+   • How many tests does it fail?
+   • Does it fail in all languages?
+
+4. Deliverables 5 & 6: Test Cases
+   • Which edge cases did you include?
+   • Balance of cases?
+   • Any deliberately excluded cases?
+
+5. Deliverables 4 & 7: Generator + Validator
+   • What challenges?
+   • How ensure completeness?
+   • How handle malformed inputs?
+
+6. Deliverable 8: Presentation
+   • What did you learn?
+   • How was your collaboration?
+   • Use of LLM tools?
+   • What would you improve?
+
+Topics for the Problems:
+------------------------
+Your team is assigned one problem number corresponding to a topic.
+
+Data Structures (Akash)
+1. Stack
+2. Queues
+3. Priority Queue I
+4. Priority Queue II
+5. Balanced BST
+6. Heaps
+7. Hash Set
+8. Hash Map
+9. Union Find I
+10. Union Find II
+11. Prefix Sums
+12. Trees I
+13. Trees II
+
+Algorithm Paradigms I (Parham)
+14. Sorting – Standard
+15. Sorting – With Constraints
+16. Sorting – Custom Comparators
+17. Sorting – Non-Comparison
+18. Bit-wise Operators
+19. Search in Strings
+20. Complete Search
+21. Recursive Backtracking
+22. Divide & Conquer
+23. Merge Sort
+24. Binary Search I
+25. Binary Search II
+26. Ternary Search
+
+Algorithm Paradigms II (Ziqi)
+27. Dynamic Programming 1D I
+28. Dynamic Programming 1D II
+29. Dynamic Programming 2D I
+30. Dynamic Programming 2D II
+31. DP – Combinatorics
+32. DP – Optimization
+33. DP – Sequences/Strings
+34. DP – Game Theory
+35. Greedy – Activity Selection
+36. Greedy – Job Scheduling
+37. Greedy – Constrained Sorting
+38. Greedy – Using Priority Queue
+39. Greedy + DP
+
+Ad-Hoc + Graph Theory (Ari)
+40. Ad-hoc Simulation
+41. Ad-hoc Implementation – Test Case
+42. Ad-hoc Implementation – Time Waster
+43. Ad-hoc Math Puzzle
+44. Ad-hoc String Manipulation
+45. Ad-hoc Date/Time Manipulation
+46. Ad-hoc Pattern Recognition
+47. Graph Traversal – BFS
+48. Graph Traversal – DFS
+49. Connected Components
+50. Topological Sort
+51. Minimum Spanning Tree
+52. Shortest Path
+
+What to Submit
+--------------
+Submit problemskeleton.zip renamed to: problemskeleton_ProblemX.zip  
+(where X is your assigned topic number), with all deliverables completed.
+
+Where to Submit
+---------------
+Submit through MyCourses (one team member only).
+
+Deadlines
+---------
+1. Original Draft: November 23rd, 2025 (23:59)
+2. Presentation: Nov 26, Dec 1, or Dec 3
+3. Final Submission: December 10th, 2025 (23:59)
