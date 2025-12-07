@@ -1,10 +1,27 @@
-Sample data will be taken from `./sample/'.  All pairs of matching
-(.in, .ans) files there will be used as sample data, in alphabetical
-order by file name.  This data will be displayed in the problem
-statement.
+Sample cases
+- sample1: Matches statement example with k=2 and mixed word lengths/scores.
+- sample2: Matches statement example with k=1 to show immediate answers.
 
-Secret test data will be taken from `./secret/'. All pairs of matching
-(.in, .ans) files there will be used to test each
-submission. Optionally a text file (with filename extension .txt)
-describing the purpose of an input file may be present. For each .txt
-file there must be a matching (.in,.ans) pair.
+Secret cases
+- secret01: Minimum n=k=1 sanity.
+- secret02: Two single-character extremes to check k=n behavior.
+- secret03: All identical words to ensure duplicates are counted separately with tie-break on arrival.
+- secret04: Mix of punctuation/high ASCII vs low to test ordering.
+- secret05: Long vs short words and punctuation-heavy words to stress sums.
+- secret06: k=1 with varied lengths; should always output current extrema.
+- secret07: Simple incremental list with k=3.
+- secret08: Alternating upper/lower pairs; deliberate ties with deterministic arrival tie-break.
+- secret09: Crafted pairs with equal/near-equal evilness to test tie handling.
+- secret10: Repetitions with growing length; k=2 keeps moving boundary.
+- secret11: k near n with duplicates and varied scores.
+- secret12: Random small words; k mid-range.
+- secret13: Random up to length 12; k=10 for mid tracking.
+- secret14: 50 single-character words from a fixed high/low set; many ties.
+- secret15: 80 random small words; k=40.
+- secret16: 5,000 single-character words; k=2,500 to stress streaming.
+- secret17: 200 random length-20 words; k=50.
+- secret18: 1,000 words with k close to n (990) to test deep ranks.
+- secret19: 150 random words up to length 30; small k=2.
+- secret20: 10,000 single-character words; k=5,000 to push O(n log k).
+
+All .ans files were generated with the accepted solution.

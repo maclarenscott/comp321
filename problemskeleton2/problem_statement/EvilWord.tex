@@ -39,8 +39,8 @@ After each new word is processed, the professor wants to know \emph{both}:
 \end{itemize}
 among all words seen so far, according to their evilness scores.
 
-These rankings are computed over the \textbf{multiset of evilness scores}, counting duplicates.  
-If multiple words share the same score, \textbf{any} word with the appropriate score is acceptable.
+These rankings are computed over the \textbf{multiset of evilness scores}, counting duplicates.
+If multiple words share the same score, ties are broken by arrival order: a word that appears \emph{later} in the input is considered more evil than an earlier word with the same score. This makes each query's answer unique.
 
 If fewer than $k$ words have appeared so far, the professor is not satisfied with either query and expects
 you to output ``-'' in its place.
@@ -102,7 +102,7 @@ Each line provides the complete stream of characters for that word.
 Output exactly $n$ lines.
 
 After processing the $i$-th word, print two space-separated tokens describing the current
-\emph{$k$-th least evil} and \emph{$k$-th most evil} words among all words seen so far:
+\emph{$k$-th least evil} and \emph{$k$-th most evil} words among all words seen so far (using the tie-breaking rule above):
 \begin{itemize}
     \item If fewer than $k$ words have been processed, print \texttt{- -}.
     \item Otherwise, print \texttt{$L$ $R$}, where \texttt{$L$} is any word whose evilness is the $k$-th smallest

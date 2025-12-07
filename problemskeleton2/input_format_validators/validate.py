@@ -1,38 +1,64 @@
 #!/usr/bin/env python3
+"""
+Input validator for The Evil Word.
 
-# This is a sample input validator, written in Python 3.
+Format:
+    n k
+    w1
+    w2
+    ...
+    wn
 
-# Please refer to the comments in README.md for a description of the syntax it
-# is validating. Then, change it as you need.
+Constraints:
+    1 <= k <= n <= 200000
+    each wi is non-empty and uses only visible ASCII [33,126] (i.e., '!'-'~')
 
-import sys
+Exit code 42 on success; any other code on failure.
+"""
+
 import re
+import sys
+from typing import NoReturn
 
-n_line = sys.stdin.readline()
-print(repr(n_line)) # useful for debugging to see where we have read
-assert re.match('^[1-9][0-9]*\n$', n_line) # note: no leading zeros
-n = int(n_line)
-assert 1 <= n <= 100
 
-unique_strings = set()
-for _ in range(n):
-    case_line = sys.stdin.readline()
-    print(repr(case_line)) # useful for debugging to see where we have read
-    # check the line syntax (string, integer, real)
-    assert re.match('^[a-z]{1,20} (0|-?[1-9][0-9]{0,2}) (0|-?[1-9][0-9]?)(\.[0-9]{1,3})?\n$', case_line)
+def fail(msg: str) -> NoReturn:
+    print(msg, file=sys.stderr)
+    sys.exit(1)
 
-    # parse the line
-    s, i, f = case_line.split()
-    assert -100 <= int(i) <= 100
-    assert -10.0 <= float(f) <= 10.0
 
-    # verify string uniqueness
-    assert s not in unique_strings
-    unique_strings.add(s)
+def main() -> None:
+    first_line = sys.stdin.readline()
+    if not first_line:
+        fail("Missing first line")
 
-# ensure no extra input
-assert sys.stdin.readline() == ''
+    if not re.fullmatch(r"[1-9]\d* [1-9]\d*\n?", first_line):
+        fail("First line must be two positive integers")
 
-# if we get here, all is well; use exit code 42.
-sys.exit(42)
+    n_str, k_str = first_line.strip().split()
+    n = int(n_str)
+    k = int(k_str)
 
+    if not (1 <= k <= n <= 200_000):
+        fail("n,k out of range or k>n")
+
+    count = 0
+    for line in sys.stdin:
+        if count >= n:
+            fail("Too many lines after expected words")
+        word = line.rstrip("\n")
+        if len(word) == 0:
+            fail("Empty word not allowed")
+        for ch in word:
+            code = ord(ch)
+            if code < 33 or code > 126:
+                fail("Invalid character (outside !-~)")
+        count += 1
+
+    if count < n:
+        fail("Too few words")
+
+    sys.exit(42)
+
+
+if __name__ == "__main__":
+    main()
