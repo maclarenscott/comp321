@@ -70,11 +70,11 @@ public class EvilWord {
             if (largest.size() > k) largest.poll();
 
             if (i + 1 < k) {
-                out.append("- -\\n");
+                out.append("- -\n");
             } else {
                 String kthSmall = smallest.peek().word;
                 String kthLarge = largest.peek().word;
-                out.append(kthSmall).append(' ').append(kthLarge).append('\\n');
+                out.append(kthSmall).append(' ').append(kthLarge).append('\n');
             }
         }
 
