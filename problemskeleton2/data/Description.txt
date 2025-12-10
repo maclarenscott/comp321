@@ -22,6 +22,7 @@ Secret cases
 - secret17: 200 random length-20 words; k=50.
 - secret18: 1,000 words with k close to n (990) to test deep ranks.
 - secret19: 150 random words up to length 30; small k=2.
-- secret20: 10,000 single-character words; k=5,000 to push O(n log k).
+- secret20: 50,000 single-character words; k=25,000 to push O(n log k).
+- secret21: 100,000 single-character words; k=50,000 for max stress test.
 
 All .ans files were generated with the accepted solution.
